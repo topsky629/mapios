@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lnX-Z5-dEj">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ecs-Eg-Upb">
+            <objects>
+                <navigationController id="lnX-Z5-dEj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OfY-3U-DRY">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rGu-d6-IRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEr-Xt-bdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="19"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="maplessons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="BXS-XW-sAP">
+                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Maker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-Pc-FTE">
+                                        <rect key="frame" x="65.333333333333329" y="0.0" width="204.66666666666669" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nlN-Oz-siP">
+                                        <rect key="frame" x="93" y="169" width="149" height="29"/>
+                                        <segments>
+                                            <segment title="Plane"/>
+                                            <segment title="Car"/>
+                                            <segment title="Trane"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField autoresizesSubviews="NO" opaque="NO" contentMode="left" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your first point" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Fb-d4-J1I">
+                                        <rect key="frame" x="20" y="318" width="295" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="address-level2"/>
+                                    </textField>
+                                    <textField autoresizesSubviews="NO" opaque="NO" contentMode="left" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your second point" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ef-Ew-D0w">
+                                        <rect key="frame" x="20" y="469" width="295" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="address-level2"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDH-JF-hmx">
+                                        <rect key="frame" x="136.66666666666666" y="620" width="62" height="30"/>
+                                        <state key="normal" title="calculate"/>
+                                        <connections>
+                                            <action selector="calculateRoute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJy-OV-xr5"/>
+                                            <segue destination="Nfr-SY-rL9" kind="show" id="n1K-Yw-zt3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5Fb-d4-J1I" secondAttribute="trailing" constant="20" id="ZB6-cX-P6i"/>
+                                    <constraint firstItem="5Fb-d4-J1I" firstAttribute="leading" secondItem="BXS-XW-sAP" secondAttribute="leading" constant="20" id="api-cm-cvX"/>
+                                    <constraint firstItem="7ef-Ew-D0w" firstAttribute="leading" secondItem="BXS-XW-sAP" secondAttribute="leading" constant="20" id="mVc-eF-iOE"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ef-Ew-D0w" secondAttribute="trailing" constant="20" id="tKl-IH-d4n"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BXS-XW-sAP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Ru-4x-jr8"/>
+                            <constraint firstItem="BXS-XW-sAP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="P8C-AM-H2d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BXS-XW-sAP" secondAttribute="trailing" constant="20" id="Uey-MX-LrH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BXS-XW-sAP" secondAttribute="bottom" constant="20" id="tgo-T3-ydl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3vx-Vo-6N4"/>
+                    <connections>
+                        <outlet property="destinationTextField" destination="7ef-Ew-D0w" id="yvv-uT-Kvg"/>
+                        <outlet property="fromTextField" destination="5Fb-d4-J1I" id="cwb-N6-Tov"/>
+                        <outlet property="segmentControl" destination="nlN-Oz-siP" id="YuK-64-qBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.36231884057972" y="18.75"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="7Y8-sb-ctf">
+            <objects>
+                <viewController id="Nfr-SY-rL9" customClass="MapViewController" customModule="maplessons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M7k-9X-gkJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Dtj-ga-MeQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yr3-bo-PAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="19"/>
+        </scene>
+    </scenes>
+</document>
